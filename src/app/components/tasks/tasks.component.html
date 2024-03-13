@@ -1,0 +1,11 @@
+<!--
+<div *ngFor="let task of tasks">
+{{task.text}}
+</div>
+-->
+
+@for (task of tasks; track task.id) {
+  <div>{{task.text}}</div>
+} @empty {
+  <div>Empty Task List</div>
+}
