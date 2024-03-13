@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {TASKS} from '../../mock-tasks';
+import { Observable, of} from 'rxjs';
 import { Task } from '../../Tasks'
-import {TaskItemComponent} from "../task-item/task-item.component";
+import {TaskItemComponent} from '../task-item/task-item.component';
+import {TaskService} from '../../services/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -13,10 +14,11 @@ import {TaskItemComponent} from "../task-item/task-item.component";
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent implements OnInit {
-  tasks: Task[] = TASKS;
-  constructor() {
+  tasks: Task[] = [];
+  constructor(private taskService: TaskService) {
   }
 
   ngOnInit() {
+    this.tasks = this.taskService.getTask();
   }
 }
