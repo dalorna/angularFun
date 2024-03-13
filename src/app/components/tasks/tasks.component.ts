@@ -1,11 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {TASKS} from '../../mock-tasks';
 import { Task } from '../../Tasks'
+import {TaskItemComponent} from "../task-item/task-item.component";
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [],
+  imports: [
+    TaskItemComponent
+  ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
