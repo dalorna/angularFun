@@ -3,13 +3,19 @@ import { Task } from '../../Tasks'
 import {TaskItemComponent} from '../task-item/task-item.component';
 import {TaskService} from '../../services/task.service';
 import {AddTaskComponent} from '../add-task/add-task.component';
+import {FooterComponent} from '../footer/footer.component';
+import {HeaderComponent} from '../header/header.component';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
   imports: [
     TaskItemComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    FooterComponent,
+    HeaderComponent,
+    RouterOutlet
   ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
