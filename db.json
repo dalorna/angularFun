@@ -24,5 +24,14 @@
       "reminder": false,
       "id": 4
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "Entertainment",
+      "name" : "Era's Tour",
+      "description": "Swift's Go all Out",
+      "code": "XYH67OPM"
+    }
   ]
 }

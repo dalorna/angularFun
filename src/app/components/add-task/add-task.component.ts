@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {Task} from '../../Tasks';
+import {Task} from '../../interfaces/Tasks';
 import {UIService} from '../../services/ui.service';
 import {Subscription} from 'rxjs';
 import {NgIf} from "@angular/common";

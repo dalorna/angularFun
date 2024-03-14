@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Task } from '../Tasks';
+import { Task } from '../interfaces/Tasks';
 
 const httpOptions ={
   headers: new HttpHeaders({
@@ -24,11 +24,9 @@ export class TaskService {
   deleteTask(task: Task): Observable<Task> {
     return this.httpClient.delete<Task>(`${this.apiUrl}/${task.id}`);
   }
-
   updateTaskReminder(task: Task): Observable<Task> {
     return this.httpClient.put<Task>(`${this.apiUrl}/${task.id}`, task, httpOptions);
   }
-
   saveTask(task: Task): Observable<Task> {
     return this.httpClient.post<Task>(this.apiUrl, task, httpOptions);
   }
